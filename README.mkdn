@@ -1,0 +1,14 @@
+Telesign
+====
+
+PHP integration for telesign.com phone and sms verification API.
+
+Example usage
+----
+
+    <?php
+    require_once 'Telesign.php';
+    $telesign = new Telesign('your-customer-id', 'your-auth-id);
+    $r = $telesign->call('1', '5556262');
+    echo "Verification code '$r->code', Telesign reference ID: '$r->referenceid'\n";
+
